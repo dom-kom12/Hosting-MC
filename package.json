@@ -1,12 +1,13 @@
 {
   "name": "nebulahostmc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+  "start": "node server.js"
+}
   },
   "keywords": [],
-  "author": "",
+  "author": "dom-rut12",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",
@@ -16,6 +17,4 @@
     "express-session": "^1.18.1",
     "mongoose": "^8.14.1",
     "socket.io": "^4.8.1"
-  },
-  "description": ""
-}
+  }
