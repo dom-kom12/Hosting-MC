@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README - SYSTEM HOSTINGU SERWERÓW MINECRAFT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .warning {
+            background-color: #ffcc00;
+            color: #000000;
+            padding: 15px;
+            border: 5px solid #ff9900;
+            margin-bottom: 30px;
+        }
+
+        .critical {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 15px;
+            border: 2px solid #ff1a1a;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .subheading {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .instructions, .notes {
+            padding-left: 20px;
+            font-size: 1.1em;
+        }
+
+        pre {
+            background-color: #2e2e2e;
+            color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            overflow-x: auto;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        .container ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .container li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        README: SYSTEM HOSTINGU SERWERÓW MINECRAFT
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h1>WSTĘP</h1>
+            <p>Witaj w oficjalnej dokumentacji systemu hostingowego do serwerów Minecraft. Ten dokument zawiera wszystkie niezbędne informacje oraz ostrzeżenia związane z konfiguracją i bezpieczeństwem systemu. Prosimy o zapoznanie się z poniższymi informacjami, aby zapewnić bezbłędne działanie Twojego serwera.</p>
+        </div>
+
+        <div class="section">
+            <h2>UWAGI OGÓLNE</h2>
+            <div class="warning">
+                <h3>WAŻNE OSTRZEŻENIE:</h3>
+                <p>Zmiana jakiejkolwiek treści w plikach systemowych lub prób manipulacji plikami systemowymi prowadzi do natychmiastowego wyłączenia serwera oraz utraty danych!</p>
+            </div>
+            <ul>
+                <li><span class="highlight">Nie modyfikuj</span> tego pliku!</li>
+                <li>Zmiana jakiejkolwiek struktury folderów skutkuje błędem systemu.</li>
+                <li>Nie używaj tego pliku do celów innych niż jego zapisywanie lub archiwizowanie.</li>
+                <li>System automatycznie loguje wszelkie manipulacje plikiem.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>FUNKCJE SYSTEMU</h2>
+            <p>System hostingowy oferuje następujące funkcje zarządzania serwerami Minecraft:</p>
+            <ol>
+                <li>Automatyczne aktualizacje serwera.</li>
+                <li>Przełączanie między wersjami Minecrafta. OD (1.21) DO (1.21.x)</li>
+                <li>Monitorowanie stanu serwera w czasie rzeczywistym. TYMCZASOWO TYLKO DLA WŁAŚCICIELA!!</li>
+                <li>Wsparcie dla serwerów TYLKO Minecraft JAVA</li>
+                <li>Wbudowane mechanizmy zabezpieczające przed atakami DDoS.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>WYMAGANIA SYSTEMOWE</h2>
+            <p>Wymagania dotyczące systemu operacyjnego i oprogramowania:</p>
+            <ul>
+                <li>System operacyjny: Ubuntu 20.04 LTS lub wyższy, Debian 11, CentOS 7+</li>
+                <li>Minimalna pamięć RAM: 4 GB</li>
+                <li>Minimalna przestrzeń dyskowa: 20 GB SSD</li>
+                <li>Porty wymagane do działania: 25565 (Minecraft)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>PROCEDURY ZABEZPIECZENIA</h2>
+            <p>Dokumentacja pokazuje, jak skonfigurować serwer z odpowiednimi zabezpieczeniami:</p>
+            <ol>
+                <li><strong>Używaj tylko bezpiecznych pluginów</strong>: Wybieraj tylko pluginy z zaufanych źródeł.</li>
+                <li><strong>Aktualizuj system regularnie</strong>: Używaj mechanizmów automatycznych do aktualizacji systemu operacyjnego.</li>
+                <li><strong>Twórz regularne kopie zapasowe</strong></li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2>NOTATKI KOŃCOWE</h2>
+            <div class="notes">
+                <p>Upewnij się, że Twój serwer działa zgodnie z najlepszymi praktykami bezpieczeństwa. Monitoruj logi systemowe, aby wykrywać wszelkie anomalie.</p>
+                <p>W przypadku problemów skontaktuj się z naszym zespołem wsparcia technicznego, używając panelu kontaktowego na naszej stronie.</p>
+            </div>
+        </div>
+    </div>
+    <div class="warning">
+    <h2 class="section">Jeśli Zapoznałeś się z plikiem README.html Ciśnij Poniższy przycisk i zaloguj się Lub Zarejestruj</h2>
+    <a href="/rejestracja.html"><button class="warning"><strong>Zarejestruj się</strong></button></a></a>
+    <a href="/login.html"><button class="warning"><strong>Zaloguj się</strong></button></a></a>
+    </div>
+    <div class="footer">
+        <p>&copy; Polish HOSTING - Wszystkie prawa zastrzeżone</p>
+    </div>
+</body>
+</html>

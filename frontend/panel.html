@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Minecraft</title>
+  <style>
+    body { font-family: sans-serif; background: #1e1e1e; color: #ddd; }
+    #console { background: #000; color: #0f0; padding: 10px; height: 400px; overflow-y: auto; }
+    input, button { padding: 8px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Panel Minecraft</h1>
+  <button onclick="start()">▶️ Start</button>
+  <button onclick="stop()">⏹ Stop</button>
+  <div id="console"></div>
+  <input id="cmd" placeholder="Wpisz komendę..." onkeydown="if(event.key==='Enter') sendCmd()">
+  <button onclick="sendCmd()">Wyślij</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    let socket, user;
+    fetch('/auth').then(r => {
+      if (r.status!==200) return location.href = '/login.html';
+      return r.json();
+    }).then(data => {
+      user = data.user;
+      socket = io();
+      socket.emit('login', user);
+      socket.on('console', msg => {
+        const c = document.getElementById('console');
+        c.innerHTML += msg.replace(/</g,'&lt;') + '<br>';
+        c.scrollTop = c.scrollHeight;
+      });
+    });
+
+    function start(){ socket.emit('start'); }
+    function stop(){ socket.emit('stop'); }
+
+    function sendCmd(){
+      const i = document.getElementById('cmd');
+      if (!i.value) return;
+      socket.emit('command', i.value);
+      i.value = '';
+    }
+  </script>
+</body>
+</html>

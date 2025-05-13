@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "452871fe-7501-3be4-8741-d35dd120e3a5",
+    "name": "dom_kom",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "1096a605-cd67-328f-9cf2-c5f14ea72fd6",
+    "name": "dom_koom",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

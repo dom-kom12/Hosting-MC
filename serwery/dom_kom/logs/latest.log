@@ -1,0 +1,349 @@
+[05:36:12] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.7; Termux null) on Linux 4.19.157-perf+ (aarch64)
+[05:36:12] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21-130-master@b1b5d4c (2024-08-10T10:02:42Z) for Minecraft 1.21
+[05:36:13] [ServerMain/WARN]: [oshi.software.os.linux.LinuxOperatingSystem] Did not find udev library in operating system. Some features may not work.
+[05:36:13] [ServerMain/WARN]: Failed retrieving info for group processor
+java.lang.NoClassDefFoundError: Could not initialize class com.sun.jna.Native
+	at oshi.jna.platform.linux.LinuxLibc.<clinit>(LinuxLibc.java:22) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.software.os.linux.LinuxOperatingSystem.<clinit>(LinuxOperatingSystem.java:98) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.platform.linux.LinuxCentralProcessor.initProcessorCounts(LinuxCentralProcessor.java:171) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.common.AbstractCentralProcessor.<init>(AbstractCentralProcessor.java:67) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.platform.linux.LinuxCentralProcessor.<init>(LinuxCentralProcessor.java:58) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.platform.linux.LinuxHardwareAbstractionLayer.createProcessor(LinuxHardwareAbstractionLayer.java:43) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.util.Memoizer$1.get(Memoizer.java:61) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.common.AbstractHardwareAbstractionLayer.getProcessor(AbstractHardwareAbstractionLayer.java:48) ~[oshi-core-6.4.10.jar:6.4.10]
+	at net.minecraft.SystemReport.lambda$putHardware$4(SystemReport.java:80) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.ignoreErrors(SystemReport.java:88) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.putHardware(SystemReport.java:80) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.lambda$new$2(SystemReport.java:58) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.ignoreErrors(SystemReport.java:88) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.<init>(SystemReport.java:58) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.CrashReport.<init>(CrashReport.java:34) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.CrashReport.preload(CrashReport.java:258) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.Main.main(Main.java:118) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at org.bukkit.craftbukkit.Main.main(Main.java:281) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[app:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.UnsatisfiedLinkError: /data/data/com.termux/files/home/.cache/JNA/temp/jna11467889482332273955.tmp: dlopen failed: library "libc.so.6" not found: needed by /data/data/com.termux/files/home/.cache/JNA/temp/jna11467889482332273955.tmp in namespace (default) [in thread "ServerMain"]
+	at java.base/jdk.internal.loader.NativeLibraries.load(Native Method) ~[?:?]
+	at java.base/jdk.internal.loader.NativeLibraries$NativeLibraryImpl.open(NativeLibraries.java:331) ~[?:?]
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:197) ~[?:?]
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:139) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2418) ~[?:?]
+	at java.base/java.lang.Runtime.load0(Runtime.java:852) ~[?:?]
+	at java.base/java.lang.System.load(System.java:2025) ~[?:?]
+	at com.sun.jna.Native.loadNativeDispatchLibraryFromClasspath(Native.java:1041) ~[jna-5.14.0.jar:5.14.0 (b0)]
+	at com.sun.jna.Native.loadNativeDispatchLibrary(Native.java:1011) ~[jna-5.14.0.jar:5.14.0 (b0)]
+	at com.sun.jna.Native.<clinit>(Native.java:221) ~[jna-5.14.0.jar:5.14.0 (b0)]
+	at com.sun.jna.platform.linux.Udev.<clinit>(Udev.java:37) ~[jna-platform-5.14.0.jar:5.14.0 (b0)]
+	at oshi.software.os.linux.LinuxOperatingSystem.<clinit>(LinuxOperatingSystem.java:80) ~[oshi-core-6.4.10.jar:6.4.10]
+	... 19 more
+[05:36:13] [ServerMain/WARN]: Failed retrieving info for group memory
+java.lang.NoClassDefFoundError: Could not initialize class oshi.software.os.linux.LinuxOperatingSystem
+	at oshi.hardware.platform.linux.LinuxGlobalMemory.<clinit>(LinuxGlobalMemory.java:28) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.platform.linux.LinuxHardwareAbstractionLayer.createMemory(LinuxHardwareAbstractionLayer.java:38) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.util.Memoizer$1.get(Memoizer.java:61) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.common.AbstractHardwareAbstractionLayer.getMemory(AbstractHardwareAbstractionLayer.java:60) ~[oshi-core-6.4.10.jar:6.4.10]
+	at net.minecraft.SystemReport.lambda$putHardware$6(SystemReport.java:82) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.ignoreErrors(SystemReport.java:88) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.putHardware(SystemReport.java:82) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.lambda$new$2(SystemReport.java:58) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.ignoreErrors(SystemReport.java:88) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.<init>(SystemReport.java:58) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.CrashReport.<init>(CrashReport.java:34) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.CrashReport.preload(CrashReport.java:258) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.Main.main(Main.java:118) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at org.bukkit.craftbukkit.Main.main(Main.java:281) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[app:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class com.sun.jna.Native [in thread "ServerMain"]
+	at oshi.jna.platform.linux.LinuxLibc.<clinit>(LinuxLibc.java:22) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.software.os.linux.LinuxOperatingSystem.<clinit>(LinuxOperatingSystem.java:98) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.platform.linux.LinuxCentralProcessor.initProcessorCounts(LinuxCentralProcessor.java:171) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.common.AbstractCentralProcessor.<init>(AbstractCentralProcessor.java:67) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.platform.linux.LinuxCentralProcessor.<init>(LinuxCentralProcessor.java:58) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.platform.linux.LinuxHardwareAbstractionLayer.createProcessor(LinuxHardwareAbstractionLayer.java:43) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.util.Memoizer$1.get(Memoizer.java:61) ~[oshi-core-6.4.10.jar:6.4.10]
+	at oshi.hardware.common.AbstractHardwareAbstractionLayer.getProcessor(AbstractHardwareAbstractionLayer.java:48) ~[oshi-core-6.4.10.jar:6.4.10]
+	at net.minecraft.SystemReport.lambda$putHardware$4(SystemReport.java:80) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.ignoreErrors(SystemReport.java:88) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.SystemReport.putHardware(SystemReport.java:80) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	... 10 more
+[05:36:13] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[05:36:15] [ServerMain/ERROR]: [DirectoryProviderSource] Error loading plugin: java.lang.IllegalArgumentException: Directory 'plugins/.paper-remapped/ServerRestartWarning-v0.1.7.jar' does not contain a paper-plugin.yml or plugin.yml! Could not determine plugin type, cannot load a plugin from it!
+java.lang.RuntimeException: java.lang.IllegalArgumentException: Directory 'plugins/.paper-remapped/ServerRestartWarning-v0.1.7.jar' does not contain a paper-plugin.yml or plugin.yml! Could not determine plugin type, cannot load a plugin from it!
+	at io.papermc.paper.plugin.provider.source.FileProviderSource.registerProviders(FileProviderSource.java:86) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.plugin.provider.source.DirectoryProviderSource.registerProviders(DirectoryProviderSource.java:52) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.plugin.provider.source.DirectoryProviderSource.registerProviders(DirectoryProviderSource.java:17) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.plugin.util.EntrypointUtil.registerProvidersFromSource(EntrypointUtil.java:15) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.plugin.PluginInitializerManager.load(PluginInitializerManager.java:113) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.Main.main(Main.java:123) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at org.bukkit.craftbukkit.Main.main(Main.java:281) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[app:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.IllegalArgumentException: Directory 'plugins/.paper-remapped/ServerRestartWarning-v0.1.7.jar' does not contain a paper-plugin.yml or plugin.yml! Could not determine plugin type, cannot load a plugin from it!
+	... 10 more
+[05:36:15] [ServerMain/INFO]: [PluginInitializerManager] Initialized 20 plugins
+[05:36:15] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (20):
+ - Anti_DDOS (1.0.0), AuthMe (5.6.0-bCUSTOM), ClearLag (3.2.2), ConsoleSpamFix (1.10.0), DiscordSRV (1.29.0), EnzonicDiscordWebhook (1.0-SNAPSHOT), Essentials (2.21.0), Geyser-Spigot (2.7.1-SNAPSHOT), HolographicDisplays (3.0.4), LuckPerms (5.4.159), RegionNotifier (v1.0), SetHome (6.2.3), SimpleTpa (7.6), TAB (5.2.0), ViaVersion (5.3.2), ViaVersionStatus (3.13), WorldEdit (7.3.5+6880-8ba3d89), WorldGuard (7.0.12+829a4a4), dynmap (3.7-SNAPSHOT-968), floodgate (2.2.4-SNAPSHOT (b116-0e3163c))
+[05:36:27] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[05:36:32] [ServerMain/INFO]: Loaded 1290 recipes
+[05:36:32] [ServerMain/INFO]: Loaded 1399 advancements
+[05:36:33] [Server thread/INFO]: Starting minecraft server version 1.21
+[05:36:33] [Server thread/INFO]: Loading properties
+[05:36:33] [Server thread/INFO]: This server is running Paper version 1.21-130-master@b1b5d4c (2024-08-10T10:02:42Z) (Implementing API version 1.21-R0.1-SNAPSHOT)
+[05:36:35] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[05:36:35] [Server thread/INFO]: Using 4 threads for Netty based IO
+[05:36:35] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[05:36:37] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend migrating to the spark profiler.
+    For more information please visit: https://github.com/PaperMC/Paper/discussions/10565
+[05:36:37] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 2 worker threads, and population gen parallelism of 2 threads
+[05:36:38] [Server thread/INFO]: Default game type: SURVIVAL
+[05:36:38] [Server thread/INFO]: Generating keypair
+[05:36:38] [Server thread/INFO]: Starting Minecraft server on *:44556
+[05:36:38] [Server thread/INFO]: Using default channel type
+[05:36:38] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[05:36:38] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[05:36:38] [Server thread/WARN]: [io.netty.util.internal.MacAddressUtil] Failed to find a usable hardware address from the network interfaces; using random bytes: 15:44:35:40:1e:5b:27:9e
+[05:36:38] [Server thread/ERROR]: [ModernPluginLoadingStrategy] Could not load 'plugins/.paper-remapped/Anti-DDOS-1.0.0.jar' in 'plugins/.paper-remapped'
+org.bukkit.plugin.UnknownDependencyException: Unknown/missing dependency plugins: [ProtocolLib]. Please download and install these plugins to run 'Anti_DDOS'.
+	at io.papermc.paper.plugin.entrypoint.strategy.modern.ModernPluginLoadingStrategy.loadProviders(ModernPluginLoadingStrategy.java:82) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.plugin.storage.SimpleProviderStorage.enter(SimpleProviderStorage.java:38) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.plugin.entrypoint.LaunchEntryPointHandler.enter(LaunchEntryPointHandler.java:40) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at org.bukkit.craftbukkit.CraftServer.loadPlugins(CraftServer.java:546) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:292) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1215) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:330) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[05:36:50] [Server thread/INFO]: [ViaVersion] Loading server plugin ViaVersion v5.3.2
+[05:36:50] [Server thread/INFO]: [ViaVersion] ViaVersion 5.3.2 is now loaded. Registering protocol transformers and injecting...
+[05:36:56] [Via-Mappingloader-0/INFO]: [ViaVersion] Loading block connection mappings ...
+[05:36:56] [Via-Mappingloader-0/INFO]: [ViaVersion] Using FastUtil Long2ObjectOpenHashMap for block connections
+[05:37:02] [Server thread/INFO]: [WorldEdit] Loading server plugin WorldEdit v7.3.5+6880-8ba3d89
+[05:37:09] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@54660c1e]
+[05:37:09] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.159
+[05:37:10] [Server thread/INFO]: [floodgate] Loading server plugin floodgate v2.2.4-SNAPSHOT (b116-0e3163c)
+[05:37:16] [Server thread/WARN]: [floodgate] en_ is not a supported Floodgate language.
+[05:37:17] [Server thread/INFO]: [floodgate] Took 6,777ms to boot Floodgate
+[05:37:17] [Server thread/INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.12+829a4a4
+[05:37:17] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.21.0
+[05:37:17] [Server thread/INFO]: [dynmap] Loading server plugin dynmap v3.7-SNAPSHOT-968
+[05:37:17] [Server thread/INFO]: [dynmap] version=1.21-130-b1b5d4c (MC: 1.21)
+[05:37:17] [Server thread/INFO]: [dynmap] Mod Support API available
+[05:37:17] [Server thread/INFO]: [ViaVersionStatus] Loading server plugin ViaVersionStatus v3.13
+[05:37:17] [Server thread/INFO]: [TAB] Loading server plugin TAB v5.2.0
+[05:37:17] [Server thread/INFO]: [SimpleTpa] Loading server plugin SimpleTpa v7.6
+[05:37:17] [Server thread/INFO]: [SetHome] Loading server plugin SetHome v6.2.3
+[05:37:17] [Server thread/INFO]: [RegionNotifier] Loading server plugin RegionNotifier vv1.0
+[05:37:17] [Server thread/INFO]: [HolographicDisplays] Loading server plugin HolographicDisplays v3.0.4
+[05:37:17] [Server thread/INFO]: [Geyser-Spigot] Loading server plugin Geyser-Spigot v2.7.1-SNAPSHOT
+[05:37:25] [Server thread/INFO]: [Geyser-Spigot] Loading extensions...
+[05:37:25] [Server thread/INFO]: [Geyser-Spigot] Loaded 0 extension(s)
+[05:37:25] [Server thread/INFO]: [DiscordSRV] Loading server plugin DiscordSRV v1.29.0
+[05:37:25] [Server thread/INFO]: [EnzonicDiscordWebhook] Loading server plugin EnzonicDiscordWebhook v1.0-SNAPSHOT
+[05:37:25] [Server thread/INFO]: [ConsoleSpamFix] Loading server plugin ConsoleSpamFix v1.10.0
+[05:37:25] [Server thread/INFO]: [ClearLag] Loading server plugin ClearLag v3.2.2
+[05:37:25] [Server thread/INFO]: [AuthMe] Loading server plugin AuthMe v5.6.0-bCUSTOM
+[05:37:25] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[05:37:25] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.3.5+6880-8ba3d89
+[05:37:26] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[05:37:26] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[05:37:29] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.v1_21.PaperweightAdapter as the Bukkit adapter
+[05:37:34] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.159
+[05:37:37] [Server thread/INFO]:         __    
+[05:37:37] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.159
+[05:37:37] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[05:37:37] [Server thread/INFO]: 
+[05:37:37] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[05:37:38] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[05:37:40] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[05:37:40] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[05:37:41] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 6463ms)
+[05:37:41] [Server thread/INFO]: [RegionNotifier] Enabling RegionNotifier vv1.0
+[05:37:41] [Server thread/INFO]: [RegionNotifier] RegionNotifier has been enabled!
+[05:37:41] [Server thread/INFO]: [ConsoleSpamFix] Enabling ConsoleSpamFix v1.10.0
+[05:37:41] [Server thread/INFO]: [ConsoleSpamFix] Server version detected: 1.21
+[05:37:41] [Server thread/INFO]: [ConsoleSpamFix] Loading the config file...
+[05:37:41] [Server thread/INFO]: [ConsoleSpamFix] Config file loaded!
+[05:37:42] [Server thread/INFO]: [ConsoleSpamFix] ConsoleSpamFix loaded successfully!
+[05:37:42] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[05:37:42] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[05:37:42] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[05:37:42] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[05:37:42] [Server thread/INFO]: Preparing level "world"
+[05:37:46] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[05:37:50] [Server thread/INFO]: Time elapsed: 4421 ms
+[05:37:50] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[05:37:51] [Server thread/INFO]: Time elapsed: 496 ms
+[05:37:51] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[05:37:52] [Server thread/INFO]: Time elapsed: 956 ms
+[05:37:52] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v5.3.2
+[05:37:52] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 1.21-1.21.1 (767)
+[05:37:52] [Server thread/INFO]: [floodgate] Enabling floodgate v2.2.4-SNAPSHOT (b116-0e3163c)
+[05:37:57] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.12+829a4a4
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world_the_end) TNT ignition is PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world_the_end) Lighters are PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world_the_end) Lava fire is PERMITTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] (world_the_end) Fire spread is UNRESTRICTED.
+[05:37:59] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_the_end'
+[05:37:59] [Server thread/INFO]: [WorldGuard] Loading region data...
+[05:38:01] [Server thread/INFO]: [Essentials] Enabling Essentials v2.21.0
+[05:38:05] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[05:38:06] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[05:38:06] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[05:38:06] [Server thread/INFO]: [Essentials] Starting Essentials ban format conversion
+[05:38:06] [Server thread/INFO]: [Essentials] Attempting to migrate ignore list to UUIDs
+[05:38:06] [Server thread/INFO]: [Essentials] Attempting to migrate legacy userdata keys to Configurate
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.11+ Item Unbreakable Provider as the provider for ItemUnbreakableProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Paper Material Tag Provider as the provider for MaterialTagProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Reflection Online Mode Provider as the provider for OnlineModeProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.21+ InventoryView Interface ABI Provider as the provider for InventoryViewProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.20.6+ Potion Meta Provider as the provider for PotionMetaProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.20.5+ Banner Data Provider as the provider for BannerDataProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.12.2+ Player Locale Provider as the provider for PlayerLocaleProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Paper Tick Count Provider as the provider for TickCountProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.13+ Spawn Egg Provider as the provider for SpawnEggProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.8.3+ Spawner Item Provider as the provider for SpawnerItemProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.20.4+ Damage Event Provider as the provider for DamageEventProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Paper Biome Key Provider as the provider for BiomeKeyProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Reflection Formatted Command Alias Provider as the provider for FormattedCommandAliasProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Paper Server State Provider as the provider for ServerStateProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.14+ Sign Data Provider as the provider for SignDataProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.14.4+ Persistent Data Container Provider as the provider for PersistentDataProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Paper Known Commands Provider as the provider for KnownCommandsProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.12+ Spawner Block Provider as the provider for SpawnerBlockProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected 1.17.1+ World Info Provider as the provider for WorldInfoProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Paper Serialization Provider as the provider for SerializationProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Reflection Sync Commands Provider as the provider for SyncCommandsProvider
+[05:38:06] [Server thread/INFO]: [Essentials] Selected Paper Container Provider as the provider for ContainerProvider
+[05:38:07] [Server thread/INFO]: [Essentials] Loaded 43465 items from items.json.
+[05:38:07] [Server thread/INFO]: [Essentials] Using locale en
+[05:38:07] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[05:38:09] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[05:38:09] [Server thread/WARN]: [Essentials] Detected supported permissions plugin LuckPerms without Vault installed.
+[05:38:09] [Server thread/WARN]: [Essentials] Features such as chat prefixes/suffixes and group-related functionality will not work until you install Vault.
+[05:38:09] [Server thread/INFO]: [Essentials] Using superperms-based permissions.
+[05:38:09] [Server thread/INFO]: [dynmap] Enabling dynmap v3.7-SNAPSHOT-968
+[05:38:09] [Server thread/INFO]: [dynmap] Added 20 custom biome mappings
+[05:38:09] [Server thread/INFO]: [dynmap] Using LuckPerms 5.4.159 for access control
+[05:38:12] [Server thread/INFO]: [dynmap] Mod Support processing completed
+[05:38:19] [Server thread/INFO]: [dynmap] Loaded 27 shaders.
+[05:38:19] [Server thread/INFO]: [dynmap] Loaded 83 perspectives.
+[05:38:19] [Server thread/INFO]: [dynmap] Loaded 22 lightings.
+[05:38:19] [Server thread/INFO]: [dynmap] Starting enter/exit processing
+[05:38:20] [Dynmap Render Thread/INFO]: [dynmap] Finish marker initialization
+[05:38:23] [Server thread/INFO]: [dynmap] Web server started on address 0.0.0.0:8123
+[05:38:23] [Server thread/INFO]: [dynmap] version 3.7-SNAPSHOT-968 is enabled - core version 3.7-SNAPSHOT-985
+[05:38:23] [Server thread/INFO]: [dynmap] For support, visit our Discord at https://discord.gg/s3rd5qn
+[05:38:23] [Server thread/INFO]: [dynmap] For news, visit https://reddit.com/r/Dynmap or follow https://universeodon.com/@dynmap
+[05:38:23] [Server thread/INFO]: [dynmap] To report or track bugs, visit https://github.com/webbukkit/dynmap/issues
+[05:38:23] [Server thread/INFO]: [dynmap] If you'd like to donate, please visit https://www.patreon.com/dynmap or https://ko-fi.com/michaelprimm
+[05:38:23] [Server thread/INFO]: [dynmap] Loaded 3 maps of world 'world'.
+[05:38:24] [Server thread/INFO]: [dynmap] Loaded 2 maps of world 'world_nether'.
+[05:38:24] [Server thread/INFO]: [dynmap] Loaded 2 maps of world 'world_the_end'.
+[05:38:24] [Server thread/INFO]: [dynmap] Enabled
+[05:38:24] [Server thread/INFO]: [ViaVersionStatus] Enabling ViaVersionStatus v3.13
+[05:38:24] [Server thread/INFO]: [ViaVersionStatus] Using ViaVersion to determine versions.
+[05:38:24] [Server thread/INFO]: [ViaVersionStatus] Metrics enabled if allowed by plugins/bStats/config.yml
+[05:38:24] [Server thread/INFO]: [TAB] Enabling TAB v5.2.0
+[05:38:25] [Server thread/INFO]: [TAB] Loaded NMS hook in 310ms
+[05:38:28] [Server thread/INFO]: [TAB] Enabled in 2712ms
+[05:38:28] [Server thread/INFO]: [SimpleTpa] Enabling SimpleTpa v7.6
+[05:38:28] [Server thread/INFO]: [SimpleTpa] If you need support contact me at https://discord.gg/SZUkza9
+[05:38:28] [Server thread/INFO]: [SimpleTpa] Simple Tpa has been enabled on version 7.6
+[05:38:28] [Server thread/INFO]: Enabled metrics. You may opt-out by changing plugins/bStats/config.yml
+[05:38:28] [Server thread/INFO]: [SetHome] Enabling SetHome v6.2.3
+[05:38:28] [Server thread/INFO]: [HolographicDisplays] Enabling HolographicDisplays v3.0.4
+[05:38:28] [Server thread/INFO]: [HolographicDisplays] Fatal error while enabling HolographicDisplays v3.0.4:
+
+Holographic Displays only supports Spigot from 1.8 to 1.20.
+The plugin has been disabled.
+
+[05:38:28] [Server thread/INFO]: [Geyser-Spigot] Enabling Geyser-Spigot v2.7.1-SNAPSHOT
+[05:38:31] [Server thread/INFO]: [DiscordSRV] Enabling DiscordSRV v1.29.0
+[05:38:31] [Server thread/INFO]: [EnzonicDiscordWebhook] Enabling EnzonicDiscordWebhook v1.0-SNAPSHOT
+[05:38:31] [Server thread/INFO]: [EnzonicDiscordWebhook] Data folder path: /data/data/com.termux/files/home/MojePliki/serwery/dom_kom/plugins/EnzonicDiscordWebhook
+[05:38:31] [Server thread/INFO]: [EnzonicDiscordWebhook] Attempting to save default config...
+[05:38:31] [Server thread/INFO]: [EnzonicDiscordWebhook] Default config saved.
+[05:38:31] [Server thread/INFO]: [EnzonicDiscordWebhook] Attempting to load config...
+[05:38:31] [Server thread/INFO]: [EnzonicDiscordWebhook] Config loaded successfully.
+[05:38:31] [Server thread/ERROR]: Error occurred while enabling EnzonicDiscordWebhook v1.0-SNAPSHOT (Is it up to date?)
+java.lang.IllegalArgumentException: Failed to parse webhook URL
+	at discord-webhook-1.0-SNAPSHOT.jar/club.minnced.discord.webhook.WebhookClientBuilder.<init>(WebhookClientBuilder.java:91) ~[discord-webhook-1.0-SNAPSHOT.jar:?]
+	at discord-webhook-1.0-SNAPSHOT.jar/plugin.enzonic.com.discordWebhook.DiscordWebhook.onEnable(DiscordWebhook.java:30) ~[discord-webhook-1.0-SNAPSHOT.jar:?]
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:288) ~[paper-api-1.21-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperPluginInstanceManager.enablePlugin(PaperPluginInstanceManager.java:202) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.enablePlugin(PaperPluginManagerImpl.java:109) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:520) ~[paper-api-1.21-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.craftbukkit.CraftServer.enablePlugin(CraftServer.java:640) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at org.bukkit.craftbukkit.CraftServer.enablePlugins(CraftServer.java:589) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.MinecraftServer.loadWorld0(MinecraftServer.java:754) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.MinecraftServer.loadLevel(MinecraftServer.java:516) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:329) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1215) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:330) ~[paper-1.21.jar:1.21-130-b1b5d4c]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[05:38:31] [Server thread/INFO]: [EnzonicDiscordWebhook] Disabling EnzonicDiscordWebhook v1.0-SNAPSHOT
+[05:38:31] [Server thread/INFO]: [ClearLag] Enabling ClearLag v3.2.2
+[05:38:31] [Server thread/INFO]: [ClearLag] Using version-adapter: LatestVersionAdapter
+[05:38:32] [Server thread/INFO]: [ClearLag] Loading modules...
+[05:38:32] [Server thread/WARN]: [ClearLag] Clearlag failed to use the internal TPS tracker during initialization. Reverted to estimation... (Index 3 out of bounds for length 3)
+[05:38:32] [Server thread/INFO]: [ClearLag] Modules enabed, loading config values
+[05:38:32] [Server thread/INFO]: [ClearLag] Modules have been loaded!
+[05:38:32] [Server thread/INFO]: [ClearLag] Clearlag is now enabled!
+[05:38:32] [Thread-21/WARN]: [ClearLag] Clearlag failed to check for updates - bukkit may be down
+[05:38:32] [Server thread/INFO]: [AuthMe] Enabling AuthMe v5.6.0-bCUSTOM
+[05:38:32] [Thread-21/WARN]: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+[05:38:32] [Thread-21/WARN]: 	at Clearlag.jar//me.minebuilders.clearlag.Util.getBukkitVersion(Util.java:105)
+[05:38:32] [Thread-21/WARN]: 	at Clearlag.jar//me.minebuilders.clearlag.BukkitUpdater.updateAvailable(BukkitUpdater.java:32)
+[05:38:32] [Thread-21/WARN]: 	at Clearlag.jar//me.minebuilders.clearlag.BukkitUpdater.run(BukkitUpdater.java:82)
+[05:38:32] [Thread-21/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[05:38:33] [DiscordSRV - Initialization/ERROR]: [DiscordSRV] No bot token has been set in the config; a bot token is required to connect to Discord.
+[05:38:33] [Server thread/INFO]: [AuthMe] SQLite Setup finished
+[05:38:35] [pool-68-thread-1/INFO]: [DiscordSRV] DiscordSRV is up-to-date. (9d4734818ab27069d76f264a4cda74a699806770)
+[05:38:35] [Server thread/INFO]: [AuthMe] Hooked into LuckPerms!
+[05:38:35] [Server thread/INFO]: [AuthMe] Hooked successfully into Essentials
+[05:38:35] [Server thread/INFO]: [AuthMe] Essentials spawn file not found: '/data/data/com.termux/files/home/MojePliki/serwery/dom_kom/plugins/Essentials/spawn.yml'
+[05:38:36] [Server thread/WARN]: [AuthMe] WARNING! The protectInventory feature requires ProtocolLib! Disabling it...
+[05:38:36] [Server thread/INFO]: [AuthMe] AuthMe 5.6.0 build n.CUSTOM successfully enabled!
+[05:38:37] [Server thread/INFO]: [spark] Starting background profiler...
+[05:38:37] [Server thread/WARN]: [spark] Unable to initialise the async-profiler engine: A runtime error occurred whilst loading the native library (/data/data/com.termux/files/home/MojePliki/serwery/dom_kom/plugins/spark/tmp/spark-10f9eeaa3cd6-libasyncProfiler.so.tmp: dlopen failed: library "libdl.so.2" not found: needed by /data/data/com.termux/files/home/MojePliki/serwery/dom_kom/plugins/spark/tmp/spark-10f9eeaa3cd6-libasyncProfiler.so.tmp in namespace (default))
+[05:38:37] [Server thread/WARN]: [spark] Please see here for more information: https://spark.lucko.me/docs/misc/Using-async-profiler
+[05:38:37] [Server thread/INFO]: [Geyser-Spigot] ******************************************
+[05:38:37] [Server thread/INFO]: [Geyser-Spigot] 
+[05:38:37] [Server thread/INFO]: [Geyser-Spigot] Loading Geyser version 2.7.1-b826 (git-master-bfbbf6c)
+[05:38:37] [Server thread/INFO]: [Geyser-Spigot] 
+[05:38:37] [Server thread/INFO]: [Geyser-Spigot] ******************************************
+[05:39:05] [spark-java-sampler-0-3/WARN]: [spark] Timed out waiting for world statistics
+[05:39:14] [nioEventLoopGroup-3-1/INFO]: [Geyser-Spigot] Started Geyser on UDP port 19132
+[05:39:14] [Server thread/INFO]: [Geyser-Spigot] Done (36.654s)! Run /geyser help for help!
+[05:39:15] [Server thread/INFO]: Done preparing level "world" (93.362s)
+[05:39:15] [Server thread/INFO]: Running delayed init tasks
+[05:39:15] [Craft Scheduler Thread - 5 - ViaVersion/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[05:39:15] [Craft Scheduler Thread - 9 - AuthMe/INFO]: [AuthMe] Downloading GEO IP database, because the old database is older than 30 days or doesn't exist
+[05:39:15] [Craft Scheduler Thread - 9 - AuthMe/WARN]: [AuthMe] No MaxMind credentials found in the configuration file! GeoIp protections will be disabled.
+[05:39:15] [Craft Scheduler Thread - 9 - AuthMe/INFO]: [AuthMe] There is no newer GEO IP database uploaded to MaxMind. Using the old one for now.
+[05:39:15] [Craft Scheduler Thread - 9 - AuthMe/WARN]: [AuthMe] Could not download GeoLiteAPI database [FileNotFoundException]: plugins/AuthMe/GeoLite2-Country.mmdb (No such file or directory)
+[05:39:15] [Craft Scheduler Thread - 6 - Essentials/INFO]: [Essentials] Fetching version information...
+[05:39:15] [Server thread/INFO]: [DiscordSRV] Disabling DiscordSRV v1.29.0
+[05:39:15] [Server thread/INFO]: Done (185.593s)! For help, type "help"
+[05:39:15] [Server thread/INFO]: Timings Reset
+[05:39:16] [Server thread/INFO]: [HolographicDisplays] Fatal error while enabling the plugin. Check previous logs for more information.
+[05:39:20] [Server thread/INFO]: [ViaVersionStatus] ViaVersion supported protocols:
+[05:39:20] [Server thread/INFO]: [ViaVersionStatus] 1.21-1.21.1(767)
+[05:39:20] [Server thread/INFO]: [ViaVersionStatus] 1.21.2-1.21.3(768)
+[05:39:20] [Server thread/INFO]: [ViaVersionStatus] 1.21.4(769)
+[05:39:20] [Server thread/INFO]: [ViaVersionStatus] 1.21.5(770)
