@@ -5,7 +5,7 @@
   "scripts": {
   "start": "node server.js"
 }
-  },
+  
   "keywords": [],
   "author": "dom-rut12",
   "license": "ISC",
